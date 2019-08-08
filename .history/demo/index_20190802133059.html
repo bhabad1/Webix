@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="//cdn.webix.com/edge/webix.css" type="text/css" />
+    <script src="//cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- <h1>Sample App</h1> -->
+    <div id="app-content"></div>
+    <script type="text/javascript" charset="utf-8">
+        /* place for UI configuration */
+        webix.ready(function(){
+            webix.ui({
+                // container: 'app-content',
+                rows: [
+                    { type: "header", template: "My App!" },
+                    {
+                        cols: [
+                            { view: "tree", id: "mytree", gravity: 0.3, select: true, data: tree_data },
+                            { view: "resizer" },
+                            { view: "datatable", id: "mydatatable", autoConfig: true, data: small_film_set }
+                        ]
+                    }
+                ]
+            });
+        })
+    </script>
+</body>
+
+</html>

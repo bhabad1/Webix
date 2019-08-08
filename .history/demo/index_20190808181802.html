@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../webix.css" type="text/css" charset="utf-8">
+    <script src="../webix.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <h1>Say Hello to Webix</h1>
+    <div id="web-app"></div>
+    <div>Webix Container is above</div>
+    <script type="text/javascript" charset="utf-8">
+
+        webix.ui({
+            width: 600,
+            height: 400,
+            container: 'web-app',
+            type: "space",
+            rows: [
+                { view: 'toolbar', id: 'my-menu', elements: [{ view: 'button', value: 'Home' }, { view: 'button', value: 'About Us' }, { view: 'button', value: 'Contact Us' }] },
+                { view:'form', id:'contactForm',
+                elements:[
+                    {view:'text', name:'name', placeholder:'Enter Your Name', width:70%},
+                    {view:'text', name:'designation', placeholder:'Enter Your Designation'},
+                    {view:'text', name:'company', placeholder:'Enter Company Name'},
+                    {view:'text', name:'mobile', placeholder:'Enter Your Mobile No'},
+                    {view:'text', name:'email', placeholder:'Enter Your Email Id'}
+            ]    
+            },
+                { template: "Row 2" },
+                {
+                    cols: [{
+                        template: 'Column 1'
+                    }, {
+                        template: 'Column 2'
+                    }
+                    ]
+                }
+            ]
+        });
+
+    </script>
+</body>
+
+</html>
